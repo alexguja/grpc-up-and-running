@@ -1,0 +1,7 @@
+version: "3"
+
+tasks:
+  build:
+    desc: "Build Go Client"
+    cmds:
+      - go build -v -o bin/service
