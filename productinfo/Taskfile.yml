@@ -1,0 +1,7 @@
+version: "3"
+
+tasks:
+  gen:
+    cmds:
+      - protoc --go_out=./service/ecommerce --go-grpc_out=./service/ecommerce proto/product_info.proto
+    desc: Generate Go code from proto file

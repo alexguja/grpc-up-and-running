@@ -1,0 +1,25 @@
+syntax = "proto3"; // Specifies the proto version
+package ecommerce; // Prevents name clashes between proto message types
+
+option go_package = ".";
+
+
+// Service interface definition
+service ProductInfo {
+    rpc addProduct(Product) returns (ProductID); // Remote method
+    rpc getProduct(ProductID) returns (Product); // Remote method
+}
+
+// Message definition
+message Product {
+    string id = 1; // Unique field-value pair
+    string name = 2;
+    string description = 3;
+    float price = 4;
+}
+
+// Message definition
+message ProductID {
+    string value = 1;
+}
+
